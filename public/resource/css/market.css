@@ -1,0 +1,84 @@
+.list-container {
+    display: grid;
+    /* padding: 20px; */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    /* padding-top: 30vh; */
+    margin-left: 3vw;
+    height: 100vh;
+}
+
+#main-list-container {
+    padding-top: 20vh;
+}
+
+.list-container .list-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 35vh;
+    width: 100%;
+    /* margin-top: 10vh; */
+    background-color: white;
+    box-shadow: 0.1px 0.1px 10px rgb(46, 46, 46, 0.2);
+    border-radius: 20px;
+    padding: 2vh 1.2vw;
+
+}
+
+
+.list-container .list-card .card-head img {
+    max-height: 6vh;
+    /* margin-bottom: 4vh; */
+}
+
+.list-container .list-card .card-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    /* margin-bottom: 2vh; */
+    /* border-bottom: 1px solid black; */
+}
+
+.company_logo img {
+    width: 100%;
+}
+
+.company_logo {
+    width: 3vw;
+    height: 3vw;
+    /* max-height: 50px; */
+    align-self: first baseline;
+    border: 0.5px solid black;
+    border-radius: 50%;
+    margin-bottom: 1.5vh;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-container .list-card p {
+    font-size: 1em;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.list-container .list-card h4 {
+    font-size: 1.3em;
+    margin-bottom: 0.7vh;
+    font-weight: 900;
+    text-align: center;
+}
+
+.btn-green {
+    background-color: #276221 !important;
+    color: white !important;
+    padding: 1.1vh 2.8vw !important;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 0.9vh;
+}

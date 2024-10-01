@@ -1,0 +1,187 @@
+/* ===== =====>> Google Font Poppins <<===== ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ===== =====>> Universal Selector <<===== ===== */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* user-select: none; */
+  color: #fff;
+}
+
+/* ===== =====>> Body Html Selector <<===== ===== */
+html {
+  font-size: 12px;
+  /* Here 1rem = 12px */
+}
+
+
+
+.sidebar {
+  background: #171619;
+  /* position: fixed; */
+  width: 18vw;
+  /* width: 300px; */
+  height: 100vh;
+  box-shadow: 5px 5px 5px rgba(16, 16, 16, .1),
+    10px 10px 10px rgba(16, 16, 16, .1);
+  transition: .3s;
+  overflow: hidden;
+  /* left: -200px; */
+}
+
+
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar.activeBar {
+  width: 6rem;
+}
+
+.sidebar ul {
+  width: 100%;
+  padding: .8rem;
+  padding-top: 2rem;
+}
+
+.sidebar ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  border-radius: .8rem;
+  cursor: pointer;
+  margin: 1vh;
+}
+
+.navLink:hover::before {
+  content: '';
+  position: absolute; 
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: .2rem;
+  height: 80%;
+  background: #fff;
+  border-radius: .8rem;
+  left: -10px;
+}
+
+.sidebar ul li.active {
+  background: #a7a7a7;
+}
+
+.sidebar ul li:hover {
+  background: #a7a7a7;
+}
+
+.sidebar ul li.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.8rem;
+  margin: auto;
+  width: .2rem;
+  height: 80%;
+  background: #fff;
+  border-radius: .8rem;
+}
+
+.sidebar ul li .ri {
+  font-size: 1.6rem;
+  margin-right: 2rem;
+  color: rgba(255, 255, 255, .7);
+  text-shadow: 5px 5px 5px rgba(16, 16, 16, .1),
+    10px 10px 10px rgba(16, 16, 16, .1),
+    5px 5px 5px rgba(16, 16, 16, .1),
+    10px 10px 10px rgba(16, 16, 16, .1);
+  transition: .3s;
+}
+
+.sidebar ul li.active .ri {
+  animation: animeRi 1.5s linear infinite;
+}
+
+@keyframes animeRi {
+
+  0%,
+  100% {
+    transform: rotate(0) scale(1);
+  }
+
+  50% {
+    transform: rotate(25deg) scale(1.2);
+  }
+}
+
+.sidebar ul li:hover .ri {
+  transform: scale(1.2);
+}
+
+.sidebar ul li a {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 300;
+}
+.sidebar ul li form {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 300;
+  padding: 0;
+  width: 50%;
+}
+
+.sidebar ul li form button{
+  background-color: transparent;
+  font-size: 1em;
+}
+
+
+.sidebar ul .bottomList {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: .8rem;
+  width: 100%;
+  /* height: 15vh; */
+}
+
+.sidebar ul .bottomList .logout .ri {
+  color: #00ff00;
+}
+
+.toggleBtn {
+  position: fixed;
+  top: 5.2rem;
+  right: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  background: #fff;
+  border-radius: .6rem;
+  box-shadow: 5px 5px 5px rgba(16, 16, 16, .1),
+    10px 10px 10px rgba(16, 16, 16, .1);
+  cursor: pointer;
+}
+
+.toggleBtn .ri {
+  font-size: 2.5rem;
+  color: #a7b2bb;
+  text-shadow: 5px 5px 5px rgba(16, 16, 16, .1),
+    10px 10px 10px rgba(16, 16, 16, .1);
+  transition: .3s;
+}
+
+.toggleBtn:hover .ri {
+  transform: scale(1.2) rotate(180deg);
+  color: #87909f;
+}

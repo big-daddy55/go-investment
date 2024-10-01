@@ -1,0 +1,243 @@
+:root {
+    --light: #f6f6f9;
+    --primary: #1976D2;
+    --light-primary: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #363949;
+    --danger: #D32F2F;
+    --light-danger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+}
+
+.wallet-main{
+    padding: 2vh 5vw;
+    height: 100vh;
+    width: 83%;
+    margin: 0!important;
+    background-color: black;
+    /* background: linear-gradient(to bottom, #00010a, #00051d); */
+}
+
+
+.wallet-main .header .left h1{
+    font-size: 3em;
+    color: white;
+}
+
+.wallet-main .insights li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* justify-content: space-between; */
+}
+
+.insights li .info {
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2em;
+}
+
+
+.wallet-main .insights {
+    background-color: rgb(240, 240, 240);
+    padding: 4vh;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 5vh;
+    /* align-items: center; */
+}
+
+.insights i {
+    font-size: 2em;
+    color: #1795ce;
+    background-color: #b4e6fd;
+    padding: 17px;
+    border-radius: 10px;
+}
+
+.insights li button {
+    margin-left: 10vw;
+    border: none;
+    border-radius: 17px;
+    padding: 0.7em 1.7em;
+    color: white;
+}
+
+
+.deposit {
+    background-color: #276221;
+}
+
+.withdraw {
+    background-color: #b21807;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.bottom-data {
+    display: flex;
+    margin-top: 5vh;
+    height: 55vh;
+}
+
+.bottom-data>div {
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.bottom-data .header {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.bottom-data .header h3 {
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bottom-data .header .bx {
+    cursor: pointer;
+}
+
+.bottom-data .transactions{
+    width: 68%;
+    background-color: rgb(240, 240, 240);
+    margin-right: 2%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+.bottom-data .bx{
+    color: black;
+    font-size: 2em;
+}
+
+
+.bottom-data .transactions .header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.bottom-data .transactions .header h3{
+    font-size: 1.5em;
+    margin-left: 2%;
+}
+
+/* .bottom-data .transactions .header .bx-filter{
+    margin-left: 63%;
+} */
+
+.bottom-data .transactions table {
+    width: 100%;
+    text-align: left;
+}
+
+.bottom-data .transactions table thead tr th{
+    color: black;
+}
+
+tr{
+    height: 8vh;
+}
+tr td{
+        font-size: 1.2em;
+}
+
+.bottom-data .reminders{
+    width: 40%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+ .status.completed {
+    background: var(--success);
+}
+
+ .status.process {
+    background: var(--primary);
+}
+
+ .status.pending {
+    background: var(--warning);
+}
+
+tr td .status {
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+
+
+
+
+.bottom-data .reminders {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.bottom-data .reminders .task-list {
+    width: 100%;
+}
+
+.bottom-data .reminders .task-list li {
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--grey);
+    padding: 14px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-data .reminders .task-list li .task-title {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-data .reminders .task-list li .task-title p {
+    margin-left: 6px;
+}
+
+.bottom-data .reminders .task-list li .bx {
+    cursor: pointer;
+}
+
+.bottom-data .reminders .task-list li.completed {
+    border-left: 10px solid var(--success);
+}
+
+.bottom-data .reminders .task-list li.not-completed {
+    border-left: 10px solid var(--danger);
+}
+
+.bottom-data .reminders .task-list li:last-child {
+    margin-bottom: 0;
+}

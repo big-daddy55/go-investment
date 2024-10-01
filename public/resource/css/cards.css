@@ -1,0 +1,189 @@
+:root {
+    --light-gray: #eceef1;
+    --gray: #9d9d9d;
+    --slate: #353535;
+    --turquoise: #1abc9c;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+/* body {
+    background: var(--light-gray);
+    font-family: "Slabo 27px", serif;
+    color: var(--slate);
+} */
+
+/* Wrapper */
+.wrapper-card {
+    margin: 5em auto;
+    max-width: 85%;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.header {
+    padding: 30px 30px 0;
+    text-align: center;
+}
+
+.header__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.header__subtitle {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--gray);
+    font-family: "Yesteryear", cursive;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+/* Grid Container */
+.cards {
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Cards */
+.card {
+    margin: 15px;
+    width: calc((100% / 3) - 30px);
+    transition: all 0.2s ease-in-out;
+}
+
+.card__inner{
+    height: 73vh;
+}
+
+.card__inner img {
+    width: 80%;
+
+
+}
+
+.card-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+    height: 25vh;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+.cap-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cap-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cap-body {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 35vh;
+}
+
+.cap-body a{
+    text-decoration: none;
+    color: var(--sec-color);
+    background-color: var(--white);
+    padding: 10px 35px;
+    border-radius: 20px;
+
+}
+
+/* Media queries for stacking cards */
+@media screen and (max-width: 991px) {
+    .card {
+        width: calc((100% / 2) - 30px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.card:hover .card__inner {
+    /* background-color: var(--turquoise); */
+    transform: scale(1.05);
+}
+
+.card__inner {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--sec-color);
+    color: var(--light-gray);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 20px;
+}
+
+.com-name{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.com-industry{
+    font-size: 0.8em;
+}
+
+.price{
+    font-size: 0.85em;
+}
+
+.card__inner:after {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+/* Expander Widths - when 3 cards in a row */
+@media screen and (min-width: 992px) {
+
+
+    .card:nth-of-type(3n + 4) {
+        clear: left;
+    }
+
+
+}
+
+/* Expander Widths - when 2 cards in a row */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .card:nth-of-type(2n + 3) {
+        clear: left;
+    }
+
+
+}

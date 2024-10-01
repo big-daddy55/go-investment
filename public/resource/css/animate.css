@@ -1,0 +1,15 @@
+.animated-text {
+    opacity: 0;
+    /* Set initial opacity to 0 so the text is hidden */
+    transform: translateX(-100px);
+    /* Move the text off-screen to the left */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    /* Add smooth transition */
+}
+
+.animated-text.animate {
+    opacity: 1;
+    /* Make the text visible when the animation class is applied */
+    transform: translateX(0);
+    /* Move the text back to its original position */
+}
